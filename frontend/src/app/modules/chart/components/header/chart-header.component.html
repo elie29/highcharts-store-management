@@ -1,0 +1,10 @@
+<h1>{{ title }}</h1>
+
+<div class="mt16">
+  <select (change)="selectChange.emit($event.target.value)">
+    <option value="">Select a chart</option>
+    <option value="bar">Bar</option>
+    <option value="series">Series</option>
+    <option value="column">Column</option>
+  </select>
+</div>

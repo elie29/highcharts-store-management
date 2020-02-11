@@ -1,0 +1,8 @@
+<app-chart-header
+  [title]="title"
+  (selectChange)="onChangeSelect($event)"
+></app-chart-header>
+
+<ng-container *ngIf="chartData$ | async as data">
+  <div [ng2-highcharts]="data" class="mt16 highcharts"></div>
+</ng-container>

@@ -1,0 +1,8 @@
+<app-header></app-header>
+
+<main role="main" class="container">
+  <router-outlet></router-outlet>
+  <app-error *ngIf="error$ | async as error" [message]="error"></app-error>
+</main>
+
+<app-overlay *ngIf="loading$ | async"></app-overlay>
