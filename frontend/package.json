@@ -24,7 +24,7 @@
     "@elie29/store": "^1.0.4",
     "bootstrap": "^4.4.1",
     "highcharts": "^8.0.0",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "ng2-highcharts": "^1.2.0",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
