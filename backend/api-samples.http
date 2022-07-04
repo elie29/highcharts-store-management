@@ -1,0 +1,17 @@
+# Requests can be executed in:
+# - IntelliJ (https://www.jetbrains.com/help/idea/http-client-in-product-code-editor.html)
+# - VS Code (https://marketplace.visualstudio.com/items?itemName=humao.rest-client)
+
+## 3 hashtags for api delemiter
+
+### Get chart bar
+GET http://localhost:3000/bar
+
+### Get chart column
+GET http://localhost:3000/column
+
+### Get chart series
+GET http://localhost:3000/series
+
+### Get unkonwn chart
+GET http://localhost:3000/foo
