@@ -1,8 +1,7 @@
-import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule, Routes } from '@angular/router';
-
+import { RouterModule } from '@angular/router';
 import { ErrorComponent } from './components/error/error.component';
 import { HeaderComponent } from './components/header/header.component';
 import { OverlayComponent } from './components/overlay/overlay.component';
@@ -15,21 +14,21 @@ import { ChartModule } from './modules/chart/chart.module';
     AppComponent,
     HeaderComponent,
     OverlayComponent,
-    ErrorComponent
+    ErrorComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     RouterModule.forRoot([]),
-    ChartModule
+    ChartModule,
   ],
   providers: [
     {
       provide: HTTP_INTERCEPTORS,
       multi: true,
-      useClass: HttpApiInterceptor
-    }
+      useClass: HttpApiInterceptor,
+    },
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {}
