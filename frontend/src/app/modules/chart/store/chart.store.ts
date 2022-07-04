@@ -4,6 +4,7 @@ import { environment } from 'src/environments/environment';
 
 import { ChartState, INITIAL_CHART_STATE } from './chart.state';
 
+// Injected in ChartModule Providers only
 @Injectable()
 export class ChartStore extends Store<ChartState> {
   constructor() {
