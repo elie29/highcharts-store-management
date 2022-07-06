@@ -2,7 +2,11 @@ import { HttpClient } from '@angular/common/http';
 import { Inject, Injectable } from '@angular/core';
 import { takeLast, tap } from 'rxjs/operators';
 
-import { CHART_URL, ChartAvailableOption } from '../interfaces/chart.interface';
+import {
+  ChartAvailableOption,
+  ChartData,
+  CHART_URL
+} from '../interfaces/chart.interface';
 import { ChartStore } from '../store/chart.store';
 
 @Injectable()
@@ -20,7 +24,7 @@ export class ChartDataService {
 
     if (this.availableCharts.includes(chart)) {
       this.http
-        .get(`${this.chartUrl}/${chart}`)
+        .get<ChartData>(`${this.chartUrl}/${chart}`)
         .pipe(
           tap(data => this.chartStore.set('chartData', data)),
           takeLast(1)
